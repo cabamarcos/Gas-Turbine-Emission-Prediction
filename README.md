@@ -1,5 +1,5 @@
 # Práctica 1 Redes de Neuronas
-## Introducción
+## 1.- Introducción
 El objetivo de esta práctica es abordar un problema real de regresión utilizando dos
 modelos de redes de neuronas supervisados:
 
@@ -47,3 +47,71 @@ de salida:
 https://archive.ics.uci.edu/dataset/551/gas+turbine+co+and+nox+emission+data+set
 Los datos que serán utilizados para la realización de la práctica podrán descargarse en la
 sección Práctica 1 en Aula Global.
+
+## 2.- Trabajo a realizar
+### 2.1.- Preparación de datos
+Antes de realizar el aprendizaje de las redes, hay que realizar un preproceso de los datos
+disponibles:
+
+- Normalización: Es recomendable normalizar las variables de entrada y salida en
+el rango [0, 1]. Para la normalización se calculará el valor mínimo y máximo de
+cada variable i y se aplicará la siguiente transformación lineal:
+![image](https://github.com/cabamarcos/P1-RRNN/assets/98906745/96b29619-f144-43d8-849f-62bc6c68279d)
+
+- Aleatorización: Para que el entrenamiento de las redes se realice en condiciones
+adecuadas es importante desordenar o ‘aleatorizar’ los datos.
+- Separación de tres conjuntos de datos:
+  · Datos de entrenamiento (70% del total de datos) para realizar el
+aprendizaje de la red.
+  · Datos de validación (15% del total de datos) que serán utilizados para
+elegir los valores óptimos de los hiperparámetros de la red (razón de
+aprendizaje, número de ciclos, número de neuronas en Perceptrón
+Multicapa).
+  · Datos de test (15% del total de datos) para evaluar la capacidad de
+generalización de la red. Por tanto, cuando finalice esta fase, deberá
+disponerse de tres ficheros (entrenamiento, validación y test) con los datos
+normalizados y que serán usados para entrenar tanto los modelos lineales
+(Adaline) como los no lineales (Perceptrón Multicapa).
+
+### 2.2.- Parte 1: Desarrollo y experimentación con Adaline
+Debido a la sencillez de esta red, no se utilizarán librerías, sino que se desarrollará un
+programa que realice desde cero el aprendizaje y evaluación de Adaline, explicado en las
+clases de teoría. Dicho programa se puede desarrollar en el lenguaje de programación que
+los alumnos decidan. El objetivo es comprender con todo detalle el funcionamiento de
+esta red sencilla. Esto ayudará a comprender redes más complejas que ya no habrá que
+programar, sino que se usarán las librerías correspondientes.
+Para verificar que el programa funciona correctamente, es aconsejable mostrar en pantalla
+el error medio a lo largo de los ciclos de aprendizaje (como se muestra en la siguiente
+tabla). El error de entrenamiento debe ir decreciendo o permanecer constante. El error de
+validación debe ir decreciendo, aunque pudiera aumentar, lo que significa que se está
+produciendo sobreaprendizaje.
+![image](https://github.com/cabamarcos/P1-RRNN/assets/98906745/35677c4e-859e-4313-b41a-14c83be1acf6)
+Además de realizar el aprendizaje de la red, el programa debe:
+
+- Calcular el error sobre el conjunto de test una vez finalizado el aprendizaje.
+- Guardar en fichero las salidas de la red para todas las instancias de test.
+- Guardar en fichero el modelo, es decir, los pesos y el umbral (bias) de la red una
+vez finalizado el aprendizaje.
+
+Con los datos procesados y el programa desarrollado, se realizarán diferentes
+experimentos cambiando el valor de la razón de aprendizaje, con el objetivo de encontrar
+el valor más adecuado para el problema dado. El valor óptimo se elegirá utilizando el
+error de validación. El número de ciclos de aprendizaje más adecuado para cada razón de
+aprendizaje hay que ajustarlo a cada experimento para conseguir la estabilización del
+error de entrenamiento y validación. Se obtendrá de la siguiente manera:
+
+- Se entrena la red durante un número de ciclos máximo.
+- Se obtiene el número de ciclos que minimiza el error de validación (número de
+ciclos óptimo). Nuestro modelo final entrenado será el que corresponda con el
+menor error de validación. Esto podrá conseguirse de cualquiera de las siguientes
+formas:
+
+  · Se repite el entrenamiento con los mismos valores aleatorios iniciales,
+pero solo el número de ciclos que minimizaban el error de validación.
+  · Se entrena la red una sola vez, pero en cada ciclo guardamos el modelo si
+el error de validación es menor que el obtenido hasta este momento.
+Cuando lleguemos al número de ciclos máximo tendremos guardado el
+mejor modelo.
+- Con este modelo final entrenado, se utilizará el conjunto de test para comprobar
+la capacidad de generalización de la red.
+

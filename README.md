@@ -86,6 +86,7 @@ tabla). El error de entrenamiento debe ir decreciendo o permanecer constante. El
 validación debe ir decreciendo, aunque pudiera aumentar, lo que significa que se está
 produciendo sobreaprendizaje.
 ![image](https://github.com/cabamarcos/P1-RRNN/assets/98906745/35677c4e-859e-4313-b41a-14c83be1acf6)
+
 Además de realizar el aprendizaje de la red, el programa debe:
 
 - Calcular el error sobre el conjunto de test una vez finalizado el aprendizaje.

@@ -116,7 +116,7 @@ mejor modelo.
 - Con este modelo final entrenado, se utilizará el conjunto de test para comprobar
 la capacidad de generalización de la red.
 
-## 2.3 Parte 2: Experimentación con el Perceptrón Multicapa
+### 2.3 Parte 2: Experimentación con el Perceptrón Multicapa
 Para el uso de Perceptrón Multicapa (PM) se utilizará el entorno Google Colab con Keras,
 utilizando el lenguaje Python. En aula Global se facilitará un documento donde se facilita
 un script básico que habrá que modificar para realizar la experimentación pedida.

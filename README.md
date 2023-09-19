@@ -116,3 +116,22 @@ mejor modelo.
 - Con este modelo final entrenado, se utilizará el conjunto de test para comprobar
 la capacidad de generalización de la red.
 
+## 2.3 Parte 2: Experimentación con el Perceptrón Multicapa
+Para el uso de Perceptrón Multicapa (PM) se utilizará el entorno Google Colab con Keras,
+utilizando el lenguaje Python. En aula Global se facilitará un documento donde se facilita
+un script básico que habrá que modificar para realizar la experimentación pedida.
+
+En la experimentación con el PM se realizarán diferentes pruebas, cambiando el número
+de neuronas ocultas y la razón de aprendizaje, con el objetivo de encontrar los valores
+más adecuados para el problema que se pretende resolver. Los valores óptimos se elegirán
+utilizando el error de validación. El profesor dará en clase indicaciones sobre el número
+de experimentos recomendable. Igual que con Adaline, el número de ciclos de aprendizaje
+más adecuado para cada configuración hay que ajustarlo a cada experimento para
+conseguir minimizar el error de validación.
+
+Una vez finalizado el aprendizaje, se utilizará el conjunto de test para comprobar la
+capacidad de generalización de la red.
+NOTA IMPORTANTE: Para poder comparar los resultados del PM con los resultados de
+Adaline, debe utilizarse el mismo tipo de error en ambos modelos. Se recomienda utilizar
+el error medio absoluto (MAE) o el error cuadrático medio (MSE).
+

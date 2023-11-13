@@ -135,3 +135,9 @@ NOTA IMPORTANTE: Para poder comparar los resultados del PM con los resultados de
 Adaline, debe utilizarse el mismo tipo de error en ambos modelos. Se recomienda utilizar
 el error medio absoluto (MAE) o el error cuadrático medio (MSE).
 
+
+
+NOTA FINAL: 9
+ERRORES:
+- En la memoria especificamos que con más épocas, el error seguiría reducuéndose, deberíamos haberlo probado.
+- En el enunciado no se especifica que probemos distinto número de capas ocultas. El profesor sugiere que se pruebe.

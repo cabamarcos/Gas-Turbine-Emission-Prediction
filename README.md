@@ -1,4 +1,15 @@
 # Práctica 1 Redes de Neuronas
+
+<!-- academic-catalog:start -->
+**UC3M · 4.º curso · Redes de neuronas · Práctica 1**
+
+Predicción del rendimiento energético (TEY) de una turbina de gas a partir de sensores, comparando Adaline implementada desde cero y un perceptrón multicapa.
+
+**Tecnologías:** Python, NumPy, TensorFlow, Keras.
+
+[Ver todos mis proyectos académicos](https://github.com/cabamarcos/academic-projects)
+<!-- academic-catalog:end -->
+
 ## 1.- Introducción
 El objetivo de esta práctica es abordar un problema real de regresión utilizando dos
 modelos de redes de neuronas supervisados:
